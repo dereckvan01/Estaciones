@@ -6,7 +6,7 @@ from pandas import read_csv
 from sqlalchemy import create_engine
 
 file= 'valores.txt'
-data2=np.loadtxt(file, delimiter='\t',dtype=bytes).astype(str)
+data2=np.loadtxt(file, skuprows=3 ,delimiter='\t',dtype=bytes).astype(str)
 df = read_csv('valores.txt', encoding = "ISO-8859-1")
 df.count()
 print(df)
